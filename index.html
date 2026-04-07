@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVerse - Movie & Series Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- image preloads -->
+    <style>
+        img {
+            background: #181818;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CSS Router Setup -->
+    <input type="radio" name="tabs" id="tab-home" checked>
+    <input type="radio" name="tabs" id="tab-movies">
+    <input type="radio" name="tabs" id="tab-series">
+    <input type="radio" name="tabs" id="tab-reviews">
+
+    <nav class="glass-nav">
+        <label for="tab-home" class="nav-btn">Home</label>
+        <label for="tab-movies" class="nav-btn">Movies</label>
+        <label for="tab-series" class="nav-btn">Series</label>
+        <label for="tab-reviews" class="nav-btn">Reviews</label>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="sections-container">
+
+        <!-- SECTION: HOME -->
+        <section id="section-home" class="view-section">
+            <div class="hero-banner">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Dhurandhar 2</h1>
+                    <div class="hero-meta">
+                        <span class="hero-rating">&#11088; 8.5</span>
+                        <span>2025</span>
+                        <span class="hero-badge">Action / Thriller</span>
+                    </div>
+                    <p class="hero-desc">Power. Revenge. No way back.</p>
+                    <a href="#modal-dhurandhar2" class="hero-btn">&#9654; VIEW DETAILS</a>
+                </div>
+            </div>
+
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-row">
+                <a href="#modal-dune" class="trend-card">
+                    <img src="dune.jpg" alt="Dune">
+                    <div class="trend-overlay">
+                        <div class="trend-title">Dune</div>
+                        <div class="trend-rating">&#11088; 8.0</div>
+                    </div>
+                </a>
+                <a href="#modal-interstellar" class="trend-card">
+                    <img src="https://image.tmdb.org/t/p/w300/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+                    <div class="trend-overlay">
+                        <div class="trend-title">Interstellar</div>
+                        <div class="trend-rating">&#11088; 8.6</div>
+                    </div>
+                </a>
+                <a href="#modal-darkknight" class="trend-card">
+                    <img src="https://image.tmdb.org/t/p/w300/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+                    <div class="trend-overlay">
+                        <div class="trend-title">The Dark Knight</div>
+                        <div class="trend-rating">&#11088; 9.0</div>
+                    </div>
+                </a>
+                <a href="#modal-parasite" class="trend-card">
+                    <img src="https://image.tmdb.org/t/p/w300/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Parasite">
+                    <div class="trend-overlay">
+                        <div class="trend-title">Parasite</div>
+                        <div class="trend-rating">&#11088; 8.5</div>
+                    </div>
+                </a>
+                <a href="#modal-matrix" class="trend-card">
+                    <img src="https://image.tmdb.org/t/p/w300/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="The Matrix">
+                    <div class="trend-overlay">
+                        <div class="trend-title">The Matrix</div>
+                        <div class="trend-rating">&#11088; 8.7</div>
+                    </div>
+                </a>
+                <a href="#modal-dhurandhar2" class="trend-card">
+                    <img src="dhurandhar2-poster.jpg" alt="Dhurandhar 2">
+                    <div class="trend-overlay">
+                        <div class="trend-title">Dhurandhar 2</div>
+                        <div class="trend-rating">&#11088; 8.5</div>
+                    </div>
+                </a>
+            </div>
+
+            <h2 class="section-title">Discover</h2>
+            <p class="intro-text">Welcome to StreamVerse. Utilize the upper navigation tabs to explore our complete
+                catalog of feature films and television series, or read community reviews to find your next favorite
+                watch.</p>
+        </section>
+
+        <!-- SECTION: MOVIES -->
+        <section id="section-movies" class="view-section">
+            <h2 class="section-title">Movies</h2>
+
+            <!-- Movie Filters -->
+            <input type="radio" name="m-filter" id="m-all" checked>
+            <input type="radio" name="m-filter" id="m-action">
+            <input type="radio" name="m-filter" id="m-scifi">
+            <input type="radio" name="m-filter" id="m-drama">
+            <input type="radio" name="m-filter" id="m-thriller">
+
+            <div class="filter-bar">
+                <label for="m-all" class="filter-label">All Genres</label>
+                <label for="m-action" class="filter-label">Action</label>
+                <label for="m-scifi" class="filter-label">Sci-Fi</label>
+                <label for="m-drama" class="filter-label">Drama</label>
+                <label for="m-thriller" class="filter-label">Thriller</label>
+            </div>
+
+            <div class="media-grid">
+                <!-- Movie: Inception -->
+                <a href="#modal-inception" class="media-card genre-scifi">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="Inception">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Inception</h3>
+                        <div class="card-meta"><span>2010</span><span class="c-rating">&#11088; 8.8</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Sci-Fi</span><span class="c-tag">2h
+                                28m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Dark Knight -->
+                <a href="#modal-darkknight" class="media-card genre-action">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+                            alt="The Dark Knight">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">The Dark Knight</h3>
+                        <div class="card-meta"><span>2008</span><span class="c-rating">&#11088; 9.0</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Action</span><span class="c-tag">2h
+                                32m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Interstellar -->
+                <a href="#modal-interstellar" class="media-card genre-scifi">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Interstellar</h3>
+                        <div class="card-meta"><span>2014</span><span class="c-rating">&#11088; 8.6</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Sci-Fi</span><span class="c-tag">2h
+                                49m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Parasite -->
+                <a href="#modal-parasite" class="media-card genre-thriller">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Parasite">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Parasite</h3>
+                        <div class="card-meta"><span>2019</span><span class="c-rating">&#11088; 8.5</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Thriller</span><span class="c-tag">2h
+                                12m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: The Matrix -->
+                <a href="#modal-matrix" class="media-card genre-scifi">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="The Matrix">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">The Matrix</h3>
+                        <div class="card-meta"><span>1999</span><span class="c-rating">&#11088; 8.7</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Sci-Fi</span><span class="c-tag">2h
+                                16m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Shawshank -->
+                <a href="#modal-shawshank" class="media-card genre-drama">
+                    <div class="card-poster-wrap">
+                        <img src="shawshank.jpg" alt="Shawshank Redemption">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">The Shawshank Redemption</h3>
+                        <div class="card-meta"><span>1994</span><span class="c-rating">&#11088; 9.3</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Drama</span><span class="c-tag">2h
+                                22m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Pulp Fiction -->
+                <a href="#modal-pulp" class="media-card genre-drama">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg" alt="Pulp Fiction">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Pulp Fiction</h3>
+                        <div class="card-meta"><span>1994</span><span class="c-rating">&#11088; 8.9</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Drama</span><span class="c-tag">2h
+                                34m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Dune -->
+                <a href="#modal-dune" class="media-card genre-scifi">
+                    <div class="card-poster-wrap">
+                        <img src="dune.jpg" alt="Dune">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Dune</h3>
+                        <div class="card-meta"><span>2021</span><span class="c-rating">&#11088; 8.0</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Sci-Fi</span><span class="c-tag">2h
+                                35m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Oppenheimer -->
+                <a href="#modal-oppenheimer" class="media-card genre-drama">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Oppenheimer</h3>
+                        <div class="card-meta"><span>2023</span><span class="c-rating">&#11088; 8.3</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Drama</span><span class="c-tag">3h
+                                0m</span></div>
+                    </div>
+                </a>
+
+                <!-- Movie: Dhurandhar 2 -->
+                <a href="#modal-dhurandhar2" class="media-card genre-thriller genre-action">
+                    <div class="card-poster-wrap">
+                        <img src="dhurandhar2-poster.jpg" alt="Dhurandhar 2">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Dhurandhar 2</h3>
+                        <div class="card-meta"><span>2025</span><span class="c-rating">&#11088; 8.5</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Action/Thriller</span></div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SECTION: SERIES -->
+        <section id="section-series" class="view-section">
+            <h2 class="section-title">TV Series</h2>
+
+            <!-- Series Filters -->
+            <input type="radio" name="s-filter" id="s-all" checked>
+            <input type="radio" name="s-filter" id="s-drama">
+            <input type="radio" name="s-filter" id="s-scifi">
+            <input type="radio" name="s-filter" id="s-thriller">
+
+            <div class="filter-bar">
+                <label for="s-all" class="filter-label">All Genres</label>
+                <label for="s-drama" class="filter-label">Drama</label>
+                <label for="s-scifi" class="filter-label">Sci-Fi</label>
+                <label for="s-thriller" class="filter-label">Thriller</label>
+            </div>
+
+            <div class="media-grid">
+                <!-- Series: Breaking Bad -->
+                <a href="#modal-bb" class="media-card genre-thriller">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Breaking Bad</h3>
+                        <div class="card-meta"><span>2008</span><span class="c-rating">&#11088; 9.5</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Thriller</span><span class="c-tag">5
+                                Seasons</span><span class="c-tag" style="background:#555">Completed</span></div>
+                    </div>
+                </a>
+
+                <!-- Series: Chernobyl -->
+                <a href="#modal-chernobyl" class="media-card genre-drama">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg" alt="Chernobyl">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Chernobyl</h3>
+                        <div class="card-meta"><span>2019</span><span class="c-rating">&#11088; 9.4</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Drama</span><span class="c-tag">1
+                                Season</span><span class="c-tag" style="background:#555">Completed</span></div>
+                    </div>
+                </a>
+
+                <!-- Series: Stranger Things -->
+                <a href="#modal-stranger" class="media-card genre-scifi">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+                            alt="Stranger Things">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Stranger Things</h3>
+                        <div class="card-meta"><span>2016</span><span class="c-rating">&#11088; 8.7</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Sci-Fi</span><span class="c-tag">4
+                                Seasons</span><span class="c-tag" style="background:var(--accent)">Ongoing</span></div>
+                    </div>
+                </a>
+
+                <!-- Series: The Last of Us -->
+                <a href="#modal-tlou" class="media-card genre-drama">
+                    <div class="card-poster-wrap">
+                        <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="The Last of Us">
+                        <div class="hover-play"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">The Last of Us</h3>
+                        <div class="card-meta"><span>2023</span><span class="c-rating">&#11088; 8.7</span></div>
+                        <div class="card-tags"><span class="c-tag tag-genre">Drama</span><span class="c-tag">1
+                                Season</span><span class="c-tag" style="background:var(--accent)">Ongoing</span></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION: REVIEWS -->
+        <section id="section-reviews" class="view-section">
+            <h2 class="section-title">Community Reviews</h2>
+            <div class="reviews-grid">
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">CinephileKai</div>
+                        <div class="r-movie">The Dark Knight</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"Heath Ledger's Joker is the greatest villain performance in cinematic history.
+                        This film transcends the superhero genre."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">NeonReelz</div>
+                        <div class="r-movie">Inception</div>
+                    </div>
+                    <div class="r-stars">★★★★☆</div>
+                    <p class="r-comment">"Mind-bending on every rewatch. The score, the visuals, the concept — Nolan
+                        at his absolute peak."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">FilmBuffSara</div>
+                        <div class="r-movie">Parasite</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"A perfect film. It's a comedy, a thriller, and a tragedy all at once. Never
+                        has a movie made me feel so many things."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">RetroFilmFan</div>
+                        <div class="r-movie">Pulp Fiction</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"Twenty years on and it still feels fresh. Tarantino created a completely new
+                        cinematic language."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">AuroraWatches</div>
+                        <div class="r-movie">Chernobyl</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"The most uncomfortable and important show I've ever seen. Essential viewing
+                        for understanding human error and bravery."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">CrunchyReel</div>
+                        <div class="r-movie">Breaking Bad</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"Bryan Cranston's transformation is the most compelling character arc ever
+                        written for television."</p>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">AstroFan2024</div>
+                        <div class="r-movie">Interstellar</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"A visual and emotional masterpiece. The docking scene alone makes it a 10/10. Hans Zimmer's score is hauntingly beautiful."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">CyberNeo</div>
+                        <div class="r-movie">The Matrix</div>
+                    </div>
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-comment">"Ahead of its time. Still the gold standard for sci-fi action and philosophy. It makes you question reality every time."</p>
+                </div>
+                <div class="r-card">
+                    <div class="r-head">
+                        <div class="r-user">ArrakisDreamer</div>
+                        <div class="r-movie">Dune</div>
+                    </div>
+                    <div class="r-stars">★★★★☆</div>
+                    <p class="r-comment">"Stunning cinematography and world-building. Denis Villeneuve has captured the scale of the books perfectly. Can't wait for Part Two!"</p>
+                </div>
+            </div>
+
+            <div class="compare-box">
+                <h3 class="comp-title">Critics vs Audience</h3>
+                <div class="compare-row">
+                    <div style="margin-bottom: 4px; font-size: 0.9rem;">Inception</div>
+                    <div class="comp-bar-container"><span class="comp-label">Critics</span>
+                        <div class="comp-track">
+                            <div class="comp-fill critics-fill" style="width: 87%"></div>
+                        </div><span class="comp-pct">87%</span>
+                    </div>
+                    <div class="comp-bar-container"><span class="comp-label">Audience</span>
+                        <div class="comp-track">
+                            <div class="comp-fill audience-fill" style="width: 91%"></div>
+                        </div><span class="comp-pct">91%</span>
+                    </div>
+                </div>
+                <div class="compare-row">
+                    <div style="margin-bottom: 4px; font-size: 0.9rem;">Parasite</div>
+                    <div class="comp-bar-container"><span class="comp-label">Critics</span>
+                        <div class="comp-track">
+                            <div class="comp-fill critics-fill" style="width: 99%"></div>
+                        </div><span class="comp-pct">99%</span>
+                    </div>
+                    <div class="comp-bar-container"><span class="comp-label">Audience</span>
+                        <div class="comp-track">
+                            <div class="comp-fill audience-fill" style="width: 90%"></div>
+                        </div><span class="comp-pct">90%</span>
+                    </div>
+                </div>
+                <div class="compare-row">
+                    <div style="margin-bottom: 4px; font-size: 0.9rem;">The Dark Knight</div>
+                    <div class="comp-bar-container"><span class="comp-label">Critics</span>
+                        <div class="comp-track">
+                            <div class="comp-fill critics-fill" style="width: 94%"></div>
+                        </div><span class="comp-pct">94%</span>
+                    </div>
+                    <div class="comp-bar-container"><span class="comp-label">Audience</span>
+                        <div class="comp-track">
+                            <div class="comp-fill audience-fill" style="width: 94%"></div>
+                        </div><span class="comp-pct">94%</span>
+                    </div>
+                <div class="compare-row">
+                    <div style="margin-bottom: 4px; font-size: 0.9rem;">Interstellar</div>
+                    <div class="comp-bar-container"><span class="comp-label">Critics</span>
+                        <div class="comp-track">
+                            <div class="comp-fill critics-fill" style="width: 73%"></div>
+                        </div><span class="comp-pct">73%</span>
+                    </div>
+                    <div class="comp-bar-container"><span class="comp-label">Audience</span>
+                        <div class="comp-track">
+                            <div class="comp-fill audience-fill" style="width: 86%"></div>
+                        </div><span class="comp-pct">86%</span>
+                    </div>
+                </div>
+                <div class="compare-row">
+                    <div style="margin-bottom: 4px; font-size: 0.9rem;">The Matrix</div>
+                    <div class="comp-bar-container"><span class="comp-label">Critics</span>
+                        <div class="comp-track">
+                            <div class="comp-fill critics-fill" style="width: 83%"></div>
+                        </div><span class="comp-pct">83%</span>
+                    </div>
+                    <div class="comp-bar-container"><span class="comp-label">Audience</span>
+                        <div class="comp-track">
+                            <div class="comp-fill audience-fill" style="width: 85%"></div>
+                        </div><span class="comp-pct">85%</span>
+                    </div>
+                </div>
+                <div class="compare-row">
+                    <div style="margin-bottom: 4px; font-size: 0.9rem;">Dune</div>
+                    <div class="comp-bar-container"><span class="comp-label">Critics</span>
+                        <div class="comp-track">
+                            <div class="comp-fill critics-fill" style="width: 83%"></div>
+                        </div><span class="comp-pct">83%</span>
+                    </div>
+                    <div class="comp-bar-container"><span class="comp-label">Audience</span>
+                        <div class="comp-track">
+                            <div class="comp-fill audience-fill" style="width: 90%"></div>
+                        </div><span class="comp-pct">90%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODALS SECTION (Pure CSS utilizing :target) -->
+    <!-- ============================================== -->
+
+    <!-- Inception -->
+    <div id="modal-inception" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left">
+                <img src="https://image.tmdb.org/t/p/w300/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="Inception">
+            </div>
+            <div class="modal-right">
+                <h2 class="m-title">Inception</h2>
+                <div class="m-meta">
+                    <span class="m-rating">&#11088; 8.8</span>
+                    <span>2010</span>
+                    <span>Sci-Fi</span>
+                    <span>2h 28m</span>
+                </div>
+                <p class="m-plot">A skilled thief who enters the dreams of others to steal secrets from their
+                    subconscious is given the inverse task of planting an idea into the mind of a CEO. As his team dives
+                    deeper into layered dream worlds, the line between reality and illusion shatters.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Christopher Nolan</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$836.8 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Leonardo DiCaprio, Joseph
+                            Gordon-Levitt, Elliot Page, Tom Hardy</span></div>
+                </div>
+                <div class="m-fact">Fact: The iconic rotating hallway fight scene took 3 weeks to film and required a set
+                    that actually rotated 360°.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Dark Knight -->
+    <div id="modal-darkknight" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+                    alt="The Dark Knight"></div>
+            <div class="modal-right">
+                <h2 class="m-title">The Dark Knight</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        9.0</span><span>2008</span><span>Action</span><span>2h 32m</span></div>
+                <p class="m-plot">When the Joker, a criminal mastermind with anarchic philosophy, emerges and plunges
+                    Gotham City into chaos, Batman must accept one of the greatest psychological and physical tests of
+                    his ability to fight injustice.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Christopher Nolan</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$1.005 Billion</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Christian Bale, Heath Ledger,
+                            Aaron Eckhart, Michael Caine</span></div>
+                </div>
+                <div class="m-fact">Fact: Heath Ledger lived in isolation for a month to prepare for the Joker role,
+                    keeping a diary of the character's thoughts.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interstellar -->
+    <div id="modal-interstellar" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                    alt="Interstellar"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Interstellar</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.6</span><span>2014</span><span>Sci-Fi</span><span>2h 49m</span></div>
+                <p class="m-plot">When Earth's future is threatened by crop blights and dust storms, a former NASA pilot
+                    leads a crew through a wormhole in search of a new home for humanity. The mission forces them to
+                    confront the relativity of time and the limits of love.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Christopher Nolan</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$773.3 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Matthew McConaughey, Anne
+                            Hathaway, Jessica Chastain, Michael Caine</span></div>
+                </div>
+                <div class="m-fact">Fact: Director Nolan consulted physicist Kip Thorne, whose equations defined what the
+                    black hole 'Gargantua' would truly look like.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parasite -->
+    <div id="modal-parasite" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+                    alt="Parasite"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Parasite</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.5</span><span>2019</span><span>Thriller</span><span>2h 12m</span></div>
+                <p class="m-plot">A poor Korean family schemes to become employed by a wealthy family and infiltrate
+                    their household by posing as unrelated, qualified individuals. What begins as dark comedy quickly
+                    descends into a chilling examination of class warfare.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Bong Joon-ho</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$263.1 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Song Kang-ho, Lee Sun-kyun, Cho
+                            Yeo-jeong, Choi Woo-shik</span></div>
+                </div>
+                <div class="m-fact">Fact: Parasite is the first non-English language film to win the Academy Award for
+                    Best Picture.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Matrix -->
+    <div id="modal-matrix" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg"
+                    alt="The Matrix"></div>
+            <div class="modal-right">
+                <h2 class="m-title">The Matrix</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.7</span><span>1999</span><span>Sci-Fi</span><span>2h 16m</span></div>
+                <p class="m-plot">A computer hacker discovers that reality as perceived is actually a simulated
+                    construct, and joins a rebellion against the machines who built it.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">The Wachowskis</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$467.2 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Keanu Reeves, Laurence
+                            Fishburne, Carrie-Anne Moss</span></div>
+                </div>
+                <div class="m-fact">Fact: The 'bullet time' effect required 120 cameras arranged in an arc.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shawshank -->
+    <div id="modal-shawshank" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="shawshank.jpg" alt="Shawshank"></div>
+            <div class="modal-right">
+                <h2 class="m-title">The Shawshank Redemption</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        9.3</span><span>1994</span><span>Drama</span><span>2h 22m</span></div>
+                <p class="m-plot">Two imprisoned men bond over years, finding solace and eventual redemption through
+                    basic human decency.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Frank Darabont</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$16.5 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Tim Robbins, Morgan Freeman,
+                            Bob Gunton</span></div>
+                </div>
+                <div class="m-fact">Fact: The film was a box office disappointment on release but gained legendary status
+                    on cable.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pulp Fiction -->
+    <div id="modal-pulp" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+                    alt="Pulp"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Pulp Fiction</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.9</span><span>1994</span><span>Drama</span><span>2h 34m</span></div>
+                <p class="m-plot">The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales
+                    of violence and redemption in Los Angeles.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Quentin Tarantino</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$213.9 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">John Travolta, Uma Thurman,
+                            Samuel L. Jackson</span></div>
+                </div>
+                <div class="m-fact">Fact: Vincent Vega's iconic dance with Mia Wallace was partly improvised.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dune -->
+    <div id="modal-dune" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="dune.jpg" alt="Dune"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Dune</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.0</span><span>2021</span><span>Sci-Fi</span><span>2h 35m</span></div>
+                <p class="m-plot">A noble family becomes embroiled in a war for control over the galaxy's most valuable
+                    asset — a rare spice.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Denis Villeneuve</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$401.8 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Timothée Chalamet, Rebecca
+                            Ferguson, Oscar Isaac</span></div>
+                </div>
+                <div class="m-fact">Fact: Denis Villeneuve spent over two years researching the original Frank Herbert
+                    novel.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Oppenheimer -->
+    <div id="modal-oppenheimer" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                    alt="Oppenheimer"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Oppenheimer</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.3</span><span>2023</span><span>Drama</span><span>3h 0m</span></div>
+                <p class="m-plot">The story of American scientist J. Robert Oppenheimer and his role in the development
+                    of the atomic bomb during World War II.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">Christopher Nolan</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">$952 Million</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Cillian Murphy, Emily Blunt,
+                            Matt Damon, Robert Downey Jr.</span></div>
+                </div>
+                <div class="m-fact">Fact: Nolan shot the Trinity test sequence using practical effects and no CGI.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERIES MODALS -->
+    <!-- Breaking Bad -->
+    <div id="modal-bb" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
+                    alt="Breaking Bad"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Breaking Bad</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        9.5</span><span>2008</span><span>Thriller</span><span>5 Seasons</span></div>
+                <p class="m-plot">A high school chemistry teacher diagnosed with lung cancer partners with a former
+                    student to manufacture methamphetamine.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Creator</span><span
+                            class="m-detail-val">Vince Gilligan</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Status</span><span
+                            class="m-detail-val">Completed (62 Episodes)</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Bryan Cranston, Aaron Paul,
+                            Anna Gunn</span></div>
+                </div>
+                <div class="m-fact">Fact: The show's color palette was specifically designed to reflect character arcs.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chernobyl -->
+    <div id="modal-chernobyl" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg"
+                    alt="Chernobyl"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Chernobyl</h2>
+                <div class="m-meta"><span class="m-rating">&#11088; 9.4</span><span>2019</span><span>Drama</span><span>1
+                        Season</span></div>
+                <p class="m-plot">In April 1986, an explosion at the Chernobyl nuclear power plant in Soviet Ukraine
+                    releases radioactive material across Europe.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Creator</span><span
+                            class="m-detail-val">Craig Mazin</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Status</span><span
+                            class="m-detail-val">Completed (5 Episodes)</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Jared Harris, Stellan
+                            Skarsgård, Emily Watson</span></div>
+                </div>
+                <div class="m-fact">Fact: Production designers blocked out locations using real photographs of the
+                    disaster area.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stranger Things -->
+    <div id="modal-stranger" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+                    alt="Stranger Things"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Stranger Things</h2>
+                <div class="m-meta"><span class="m-rating">&#11088;
+                        8.7</span><span>2016</span><span>Sci-Fi</span><span>4 Seasons</span></div>
+                <p class="m-plot">When a boy vanishes in the small Indiana town of Hawkins, uncovering an extraordinary
+                    mystery involving secret government experiments.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Creators</span><span
+                            class="m-detail-val">The Duffer Brothers</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Status</span><span
+                            class="m-detail-val">Ongoing</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Millie Bobby Brown, Finn
+                            Wolfhard, Winona Ryder</span></div>
+                </div>
+                <div class="m-fact">Fact: Kate Bush's 'Running Up That Hill' re-entered charts at #1 after Season 4.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Last of Us -->
+    <div id="modal-tlou" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg"
+                    alt="The Last of Us"></div>
+            <div class="modal-right">
+                <h2 class="m-title">The Last of Us</h2>
+                <div class="m-meta"><span class="m-rating">&#11088; 8.7</span><span>2023</span><span>Drama</span><span>1
+                        Season</span></div>
+                <p class="m-plot">A smuggler is tasked with escorting a teenage girl across a post-apocalyptic America
+                    ravaged by a fungal infection.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Creators</span><span
+                            class="m-detail-val">Craig Mazin, Neil Druckmann</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Status</span><span
+                            class="m-detail-val">Ongoing</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Pedro Pascal, Bella Ramsey,
+                            Nick Offerman</span></div>
+                </div>
+                <div class="m-fact">Fact: Episode 3 aired as a standalone beautiful love story winning critical acclaim.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Dhurandhar 2 -->
+    <div id="modal-dhurandhar2" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#close" class="close-btn">&times;</a>
+            <div class="modal-left"><img src="dhurandhar2-poster.jpg" alt="Dhurandhar 2"></div>
+            <div class="modal-right">
+                <h2 class="m-title">Dhurandhar 2</h2>
+                <div class="m-meta">
+                    <span class="m-rating">&#11088; 8.5</span>
+                    <span>2025</span>
+                    <span>Action / Thriller</span>
+                    <span>2h 20m</span>
+                </div>
+                <p class="m-plot">A powerful underworld figure rises again as past betrayals resurface. As revenge unfolds, alliances break and survival becomes the only rule in a brutal game of power and control.</p>
+                <div class="m-details-grid">
+                    <div class="m-detail-item"><span class="m-detail-label">Director</span><span
+                            class="m-detail-val">TBD</span></div>
+                    <div class="m-detail-item"><span class="m-detail-label">Box Office</span><span
+                            class="m-detail-val">Upcoming</span></div>
+                    <div class="m-detail-item" style="grid-column: 1 / -1;"><span
+                            class="m-detail-label">Cast</span><span class="m-detail-val">Lead Actor, Supporting Cast</span></div>
+                </div>
+                <div class="m-fact">Fact: Dhurandhar 2 continues the saga with a darker narrative, focusing on intense action sequences and deeper character conflicts.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
